@@ -42,7 +42,6 @@ After you modified the python code and want to rebuild an .exe file, just run:
 pyinstaller -w -i path_to_icon.ico MiniChat.py 
 ```
 
-## 2. Limitations and future improvements
 
 ## 2. Future improvements
 
