@@ -1,0 +1,47 @@
+# MiniChat
+
+A WeChat-style chat robot, built by pyqt5
+
+This project uses Google Gemini as chat model and design a WeChat-style GUI.
+
+## 1. Quick Start
+
+### 1. 1  Requirements
+
+- Python >3.9
+
+- google-generativeai
+
+- pyqt5 == 5.15.2
+
+To install google-generativeai,run:
+
+```shell
+pip install -q -U google-generativeai
+```
+
+For more details and Gemini API, visit [here](https://ai.google.dev/tutorials/python_quickstart).
+
+Besides, you also need to apply for a Gemini API_Key [here](https://ai.google.dev/)
+
+### 1.2 Start Chatting!!!
+
+To open the GUI, run python script:
+
+```shell
+python MiniChat.py
+```
+
+Or you can download our released .exe file. Be careful to keep the **src** folder and **.exe** files in one folder
+
+### 1.3 Modified and rebuilt
+
+After you modified the python code and want to rebuild an .exe file, just run:
+
+```shell
+pyinstaller -w -i path_to_icon.ico MiniChat.py 
+```
+
+## 2. Limitations and future improvements
+
+Adaptive window
