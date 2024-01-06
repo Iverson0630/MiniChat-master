@@ -44,4 +44,10 @@ pyinstaller -w -i path_to_icon.ico MiniChat.py
 
 ## 2. Limitations and future improvements
 
-Adaptive window
+## 2. Future improvements
+
+- Adaptive window size
+- Chat with multiple objects at the same time, now only one
+- Support image input 
+
+
