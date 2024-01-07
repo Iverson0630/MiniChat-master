@@ -32,7 +32,11 @@ To open the GUI, run python script:
 python MiniChat.py
 ```
 
-Or you can download our released .exe file. Be careful to keep the **src** folder and **.exe** files in one folder
+Or you can [download]() our released .exe file. Be careful to keep the **src** folder and **.exe** files in one folder
+
+"用户名" or ''Admin" is customized and the "密码" or "password" is your API_KEY.
+
+**Remember to enable VPN and switch the region to a supported country otherwise the login screen will be stuck!!!**
 
 ### 1.3 Modified and rebuilt
 
@@ -42,6 +46,11 @@ After you modified the python code and want to rebuild an .exe file, just run:
 pyinstaller -w -i path_to_icon.ico MiniChat.py 
 ```
 
-## 2. Limitations and future improvements
+## 2. Future improvements
 
-Adaptive window
+- Adaptive window size
+- Chat with multiple objects at the same time, now only one
+- Support image input 
+
+
+

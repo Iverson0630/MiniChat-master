@@ -142,31 +142,31 @@ class Login(QtWidgets.QMainWindow,Ui_Login):
         if  not os.path.exists('src/admin.txt'):
             self.admin = self.plainTextEdit.toPlainText()[5:]
             self.password = self.plainTextEdit_2.toPlainText()[4:]
-        import eventlet  # 导入eventlet这个模块,防止未开VPN时连接服务器时卡死
         genai.configure(api_key=self.password,transport="rest")
         count =0
 
         try:
-            eventlet.monkey_patch()  # 必须加这条代码
-            with eventlet.Timeout(3, True):  # 设置超时时间为2秒
-                for m in genai.list_models():
+            for m in genai.list_models():
+                if 'generateContent' in m.supported_generation_methods:
                     count+=1
+                    
         except:
             QMessageBox.warning(self,'错误','网络连接错误', QMessageBox.Yes)
             count =0
 
         if count>0:
-            if self.checkBox.isChecked():
-                if not os.path.exists('src/admin.txt'):
-                    with open('src/admin.txt', 'w') as f:
-                        f.write(self.admin+'\n')
-                        f.write(self.password)
+                    if self.checkBox.isChecked():
+                        if not os.path.exists('src/admin.txt'):
+                            with open('src/admin.txt', 'w') as f:
+                                f.write(self.admin+'\n')
+                                f.write(self.password)
 
-            myapp = MyApp(self.password)
-            myapp.setWindowTitle("MiniChat")
-            #myapp.resize(1470, 820)
-            myapp.show()
-            self.close()
+                    myapp = MyApp(self.password)
+                    myapp.setWindowTitle("MiniChat")
+                    #myapp.resize(1470, 820)
+                    myapp.show()
+                    self.close()
+
         else:
             QMessageBox.warning(self,'错误','API_KEY错误', QMessageBox.Yes)
 
