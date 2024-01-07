@@ -46,7 +46,7 @@ After you modified the python code and want to rebuild an .exe file, just run:
 pyinstaller -w -i path_to_icon.ico MiniChat.py 
 ```
 
-<<<<<<< HEAD
+
 ## 2. Future improvements
 
 - Adaptive window size
@@ -64,4 +64,3 @@ pyinstaller -w -i path_to_icon.ico MiniChat.py
 - Support image input 
 
 
->>>>>>> 418a3b8afd947d90e31916c94adaac0a055e967d
